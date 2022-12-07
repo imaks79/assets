@@ -103,10 +103,3 @@ df['label'] = df['label'].apply(lambda x: names_classes[x])
 
 df.to_csv('submission.csv', index=False)
 ```
-
-# 3. Добавить нормализацию изображения при его загрузке.
-```python
-transforms.Compose(
-    ToTesnsor()
-)
-```

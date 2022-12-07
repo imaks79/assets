@@ -1,0 +1,14 @@
+setuptools
+time
+sys
+os
+glob
+random
+enum
+matplotlib
+numpy
+pandas
+tqdm
+torch
+torchvision
+torch-summary

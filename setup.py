@@ -3,12 +3,13 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read();
 
+
 def versionDev():
     from setuptools_scm.version import get_local_dirty_tag
     def clean_scheme(version):
         return get_local_dirty_tag(version) if version.dirty else '';
-
     return {'local_scheme': clean_scheme};
+
 
 setuptools.setup(
     name = "assets",

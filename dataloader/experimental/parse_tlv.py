@@ -22,15 +22,15 @@ def getMesseges(byteBuffer, idX):
 
 
 def get_TLV_packet(Header, byteBuffer, detObj, configParameters, idX, tlv_type):
-    if tlv_type == MMWDEMO_UART_MSG_DETECTED_POINTS: detObj, dataOK = get_DETECTED_POINTS(Header, byteBuffer, detObj, idX);
-    elif tlv_type == MMWDEMO_UART_MSG_RANGE_PROFILE: detObj, dataOK = get_RANGE_PROFILE(byteBuffer, configParameters, detObj, idX);
-    elif tlv_type == MMWDEMO_OUTPUT_MSG_NOISE_PROFILE: detObj, dataOK = get_NOISE_PROFILE(byteBuffer, configParameters, detObj, idX);
-    elif tlv_type == MMWDEMO_OUTPUT_MSG_AZIMUT_STATIC_HEAT_MAP: detObj, dataOK = get_AZIMUT_STATIC_HEAT_MAP(byteBuffer, configParameters, detObj, idX);
-    elif tlv_type == MMWDEMO_OUTPUT_MSG_RANGE_DOPPLER_HEAT_MAP: detObj, dataOK = get_RANGE_DOPPLER_HEAT_MAP(byteBuffer, configParameters, detObj, idX);
+    if tlv_type == MMWDEMO_UART_MSG_DETECTED_POINTS: detObj, dataOK, idX = get_DETECTED_POINTS(Header, byteBuffer, detObj, idX);
+    elif tlv_type == MMWDEMO_UART_MSG_RANGE_PROFILE: detObj, dataOK, idX = get_RANGE_PROFILE(byteBuffer, configParameters, detObj, idX);
+    elif tlv_type == MMWDEMO_OUTPUT_MSG_NOISE_PROFILE: detObj, dataOK, idX = get_NOISE_PROFILE(byteBuffer, configParameters, detObj, idX);
+    elif tlv_type == MMWDEMO_OUTPUT_MSG_AZIMUT_STATIC_HEAT_MAP: detObj, dataOK, idX = get_AZIMUT_STATIC_HEAT_MAP(byteBuffer, configParameters, detObj, idX);
+    elif tlv_type == MMWDEMO_OUTPUT_MSG_RANGE_DOPPLER_HEAT_MAP: detObj, dataOK, idX = get_RANGE_DOPPLER_HEAT_MAP(byteBuffer, configParameters, detObj, idX);
     elif tlv_type == MMWDEMO_OUTPUT_MSG_STATS: pass; 
     elif tlv_type == MMWDEMO_OUTPUT_MSG_DETECTED_POINTS_SIDE_INFO: pass; # get_DETECTED_POINTS_SIDE_INFO(Header, byteBuffer, idX);
     elif tlv_type == MMWDEMO_OUTPUT_MSG_MAX: pass; 
-    return detObj, dataOK;
+    return detObj, dataOK, idX;
 
 
 def readAndParseTLVData(Data, configParameters, frames = 1):
@@ -55,7 +55,7 @@ def readAndParseTLVData(Data, configParameters, frames = 1):
                 tlv_type, tlv_length, idX = getMesseges(byteBuffer, idX);
                 if DEBUG: debug_message(tlv_type, tlv_length, tlvIdx, Header);
                 ## Чтение данных по TLV сообщению
-                get_TLV_packet(Header, byteBuffer, detObj, configParameters, idX, tlv_type);
+                detObj, dataOK, idX = get_TLV_packet(Header, byteBuffer, detObj, configParameters, idX, tlv_type);
             ## Удаление уже обработанных данных
             byteBuffer, byteBufferLength = clear_old_data(byteBuffer, totalPacketLen, idX)
             if dataOK:

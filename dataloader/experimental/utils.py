@@ -1,6 +1,30 @@
 import numpy as np
 
-from params import *
+import time
+
+DEBUG = False;
+
+current_time = '[' + time.strftime("%H:%M:%S", time.localtime()) + ']'; 
+
+# Код синхронизации
+magicWord = [2, 1, 4, 3, 6, 5, 8, 7]; 
+
+# Перевод байтов
+word = [1, 2 ** 8, 2 ** 16, 2 ** 24]; 
+
+# Размеры
+OBJ_STRUCT_SIZE_BYTES = 12; 
+BYTE_VEC_ACC_MAX_SIZE = 2 ** 15; 
+
+# Сообщения TLV
+MMWDEMO_UART_MSG_DETECTED_POINTS = 1; 
+MMWDEMO_UART_MSG_RANGE_PROFILE   = 2; 
+MMWDEMO_OUTPUT_MSG_NOISE_PROFILE = 3; 
+MMWDEMO_OUTPUT_MSG_AZIMUT_STATIC_HEAT_MAP = 4; 
+MMWDEMO_OUTPUT_MSG_RANGE_DOPPLER_HEAT_MAP = 5; 
+MMWDEMO_OUTPUT_MSG_STATS = 6; 
+MMWDEMO_OUTPUT_MSG_DETECTED_POINTS_SIDE_INFO  = 7; 
+MMWDEMO_OUTPUT_MSG_MAX = 8; 
 
 
 def readdata(Data):
@@ -175,7 +199,7 @@ def get_DETECTED_POINTS(Header, byteBuffer, detObj, idX):
     # detObj['detectedAzimuth'] = detectedAzimuth; 
     # detObj['detectedElevAngle'] = detectedElevAngle; 
     dataOK = 1; 
-    return detObj, dataOK;
+    return detObj, dataOK, idX;
 def get_RANGE_PROFILE(byteBuffer, configParameters, detObj, idX):
     numBytes = configParameters['numRangeBins'] * 2; 
     payload = byteBuffer[idX:idX + numBytes]; 
@@ -183,7 +207,7 @@ def get_RANGE_PROFILE(byteBuffer, configParameters, detObj, idX):
     range_profile = payload.view(dtype=np.int16); 
     detObj['range_profile'] = range_profile; 
     dataOK = 1; 
-    return detObj, dataOK;
+    return detObj, dataOK, idX;
 def get_NOISE_PROFILE(byteBuffer, configParameters, detObj, idX):
     numBytes = configParameters['numRangeBins'] * 2; 
     payload = byteBuffer[idX:idX + numBytes]; 
@@ -191,7 +215,7 @@ def get_NOISE_PROFILE(byteBuffer, configParameters, detObj, idX):
     noise_profile = payload.view(dtype=np.int16); 
     detObj['noise_profile'] = noise_profile; 
     dataOK = 1; 
-    return detObj, dataOK;
+    return detObj, dataOK, idX;
 def get_AZIMUT_STATIC_HEAT_MAP(byteBuffer, configParameters, detObj, idX):
     numVirtualAntennas = 4 * 2; 
     numBytes =  configParameters['numRangeBins'] * numVirtualAntennas; 
@@ -201,7 +225,7 @@ def get_AZIMUT_STATIC_HEAT_MAP(byteBuffer, configParameters, detObj, idX):
     # Список в матрицу TODO
     detObj['azimuthDoppler'] = AzimuthDoppler; 
     dataOK = 1;
-    return detObj, dataOK;
+    return detObj, dataOK, idX;
 def get_RANGE_DOPPLER_HEAT_MAP(byteBuffer, configParameters, detObj, idX):
     numBytes = configParameters['numRangeBins'] * configParameters['numDopplerBins'] * 2; 
     payload = byteBuffer[idX:idX + int(numBytes)]; 
@@ -214,7 +238,7 @@ def get_RANGE_DOPPLER_HEAT_MAP(byteBuffer, configParameters, detObj, idX):
     detObj['rangeArray'] = np.array(range(configParameters['numRangeBins'])) * configParameters['rangeIdxToMeters']; 
     detObj['dopplerArray'] = np.multiply(np.arange(-configParameters['numDopplerBins']/2, configParameters['numDopplerBins']/2), configParameters['dopplerResolutionMps']); 
     dataOK = 1; 
-    return detObj, dataOK;
+    return detObj, dataOK, idX;
 def get_STATS():
     pass;
 def get_DETECTED_POINTS_SIDE_INFO(Header, byteBuffer, idX):

@@ -1,0 +1,9 @@
+<map id="MmwDemo_DPC_ObjDet_DynCfg_t" name="MmwDemo_DPC_ObjDet_DynCfg_t">
+<area shape="rect" id="node2" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/objectdetection/objdethwa/docs/objdethwa.tag$struct_d_p_c___object_detection___dyn_cfg__t.html" title="DPC_ObjectDetection\l_DynCfg_t" alt="" coords="423,162,575,203"/>
+<area shape="rect" id="node3" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/dpu/cfarcaproc/docs/cfarcaproc.tag$struct_d_p_u___c_f_a_r_c_a_proc___cfar_cfg__t.html" title="DPU_CFARCAProc_CfarCfg_t" alt="" coords="10,19,215,45"/>
+<area shape="rect" id="node4" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpu/rangeproc/docs/rangeproc.tag$struct_d_p_u___range_proc___calib_dc_range_sig_cfg__t.html" title="DPU_RangeProc_CalibDcRange\lSigCfg_t" alt="" coords="5,70,220,111"/>
+<area shape="rect" id="node5" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/dpu/cfarcaproc/docs/cfarcaproc.tag$struct_d_p_u___c_f_a_r_c_a_proc___fov_cfg__t.html" title="DPU_CFARCAProc_FovCfg_t" alt="" coords="11,136,214,163"/>
+<area shape="rect" id="node6" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/objectdetection/objdethwa/docs/objdethwa.tag$struct_d_p_c___object_detection___static_clutter_removal_cfg___base__t.html" title="DPC_ObjectDetection\l_StaticClutterRemovalCfg\l_Base_t" alt="" coords="25,187,200,243"/>
+<area shape="rect" id="node7" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/dpu/aoaproc/docs/aoaproc.tag$struct_d_p_u___ao_a_proc___fov_aoa_cfg__t.html" title="DPU_AoAProc_FovAoaCfg_t" alt="" coords="15,267,210,293"/>
+<area shape="rect" id="node8" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/dpu/aoaproc/docs/aoaproc.tag$struct_d_p_u___ao_a_proc___multi_obj_beam_forming_cfg__t.html" title="DPU_AoAProc_MultiObjBeam\lFormingCfg_t" alt="" coords="13,318,212,359"/>
+</map>

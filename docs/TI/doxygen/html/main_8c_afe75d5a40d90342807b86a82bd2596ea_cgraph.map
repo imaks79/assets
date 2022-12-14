@@ -1,0 +1,7 @@
+<map id="MmwDemo_stopSensor" name="MmwDemo_stopSensor">
+<area shape="rect" id="node2" href="$main_8c.html#a3c17d8c017368968d943d22fb96965ea" title="MmwDemo_MMWave_stop" alt="" coords="225,31,409,57"/>
+<area shape="rect" id="node5" href="$main_8c.html#a8088890fe7b39d3c19a9b6f0c9a9f10f" title="MmwDemo_sensorStopEpilog" alt="" coords="218,81,417,108"/>
+<area shape="rect" id="node6" href="$main_8c.html#a76e8322a717c19e931c545d073617c2c" title="MmwDemo_waitUntilDataPath\lStopped" alt="" coords="216,133,419,174"/>
+<area shape="rect" id="node3" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/control/mmwave/docs/mmwave.tag$group___m_m_w_a_v_e___c_t_r_l___e_x_t_e_r_n_a_l___f_u_n_c_t_i_o_n.html#gab01615f3c8764a3e638a6d5261733e55" title="MMWave_decodeError" alt="" coords="467,5,621,32"/>
+<area shape="rect" id="node4" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/control/mmwave/docs/mmwave.tag$group___m_m_w_a_v_e___c_t_r_l___e_x_t_e_r_n_a_l___f_u_n_c_t_i_o_n.html#ga923b000ece4cf70386391d335f344791" title="MMWave_stop" alt="" coords="489,56,599,83"/>
+</map>

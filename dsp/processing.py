@@ -1,6 +1,8 @@
 import numpy as np
 
-from .utils import windowing, clutter_removal, separate_tx
+from .utils import windowing
+from .utils import clutter_removal 
+from .utils import separate_tx
 
 
 # Window.BARTLETT, Window.BLACKMAN, Window.HAMMING, Window.HANNING
@@ -66,5 +68,3 @@ def doppler_processing(fft1d_out,
 #         if accumulate: uDoppler = np.sum(udoppler_data, axis = 1).T;
 #         else: uDoppler = udoppler_data.T;
 #     return uDoppler;
-
-

@@ -1,0 +1,11 @@
+<map id="xwr68xx/mmw/mmw.h" name="xwr68xx/mmw/mmw.h">
+<area shape="rect" id="node5" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/control/mmwave/docs/mmwave.tag$mmwave_8h.html" title="ti/control/mmwave/mmwave.h" alt="" coords="163,259,360,285"/>
+<area shape="rect" id="node9" href="$data__path_8h.html" title="This is the data path processing header. " alt="" coords="564,80,719,121"/>
+<area shape="rect" id="node10" href="$sys__common_8h.html" title="This is the common header file used by the various mmWave SDK modules. " alt="" coords="700,259,876,285"/>
+<area shape="rect" id="node20" href="$mmw__config_8h.html" title="This is the header file that describes configurations for the Millimeter Wave Demo. " alt="" coords="666,169,820,211"/>
+<area shape="rect" id="node21" href="$mmwdemo__adcconfig_8h.html" title="API header for adc open/config functions. " alt="" coords="896,169,1057,211"/>
+<area shape="rect" id="node22" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/objectdetection/objdethwa/docs/objdethwa.tag$objectdetection_8h.html" title="ti/datapath/dpc/objectdetection\l/objdethwa/objectdetection.h" alt="" coords="442,169,642,211"/>
+<area shape="rect" id="node11" href="$sys__types_8h.html" title="This is the common header file that contains types for mmwave SDK. " alt="" coords="530,341,689,367"/>
+<area shape="rect" id="node15" href="$sys__common__xwr68xx_8h.html" title="This is the common header file used by the various mmWave SDK modules for XWR68XX device..." alt="" coords="888,333,1054,375"/>
+<area shape="rect" id="node16" href="$sys__common__xwr68xx__mss_8h.html" title="This is the common header file used by the various mmWave SDK modules for XWR68xx Master subsystem..." alt="" coords="888,423,1054,464"/>
+</map>

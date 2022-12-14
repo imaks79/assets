@@ -1,0 +1,5 @@
+<map id="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/common/sys_common.h" name="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/common/sys_common.h">
+<area shape="rect" id="node2" href="$sys__types_8h.html" title="This is the common header file that contains types for mmwave SDK. " alt="" coords="5,117,164,143"/>
+<area shape="rect" id="node6" href="$sys__common__xwr68xx_8h.html" title="This is the common header file used by the various mmWave SDK modules for XWR68XX device..." alt="" coords="363,109,529,151"/>
+<area shape="rect" id="node7" href="$sys__common__xwr68xx__mss_8h.html" title="This is the common header file used by the various mmWave SDK modules for XWR68xx Master subsystem..." alt="" coords="363,199,529,240"/>
+</map>

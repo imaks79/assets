@@ -1,0 +1,9 @@
+<map id="MmwDemo_CLISensorStop" name="MmwDemo_CLISensorStop">
+<area shape="rect" id="node2" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/utils/cli/docs/cli.tag$group___c_l_i___u_t_i_l___e_x_t_e_r_n_a_l___f_u_n_c_t_i_o_n.html#ga115d0ce3ad0a40b0d11746e38947a110" title="CLI_write" alt="" coords="281,31,359,57"/>
+<area shape="rect" id="node3" href="$main_8c.html#afe75d5a40d90342807b86a82bd2596ea" title="MmwDemo_stopSensor" alt="" coords="239,81,401,108"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c17d8c017368968d943d22fb96965ea" title="MmwDemo_MMWave_stop" alt="" coords="459,31,643,57"/>
+<area shape="rect" id="node7" href="$main_8c.html#a8088890fe7b39d3c19a9b6f0c9a9f10f" title="MmwDemo_sensorStopEpilog" alt="" coords="451,81,650,108"/>
+<area shape="rect" id="node8" href="$main_8c.html#a76e8322a717c19e931c545d073617c2c" title="MmwDemo_waitUntilDataPath\lStopped" alt="" coords="449,133,652,174"/>
+<area shape="rect" id="node5" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/control/mmwave/docs/mmwave.tag$group___m_m_w_a_v_e___c_t_r_l___e_x_t_e_r_n_a_l___f_u_n_c_t_i_o_n.html#gab01615f3c8764a3e638a6d5261733e55" title="MMWave_decodeError" alt="" coords="700,5,855,32"/>
+<area shape="rect" id="node6" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/control/mmwave/docs/mmwave.tag$group___m_m_w_a_v_e___c_t_r_l___e_x_t_e_r_n_a_l___f_u_n_c_t_i_o_n.html#ga923b000ece4cf70386391d335f344791" title="MMWave_stop" alt="" coords="722,56,833,83"/>
+</map>

@@ -1,15 +1,12 @@
 import numpy as np
 from enum import Enum
-# 
-# 
-# ========== # ========== # ========== # ========== # 
-# Доступные оконные функции
-# ========== # ========== # ========== # ========== # 
+
+
 class Window(Enum): BARTLETT, BLACKMAN, HAMMING, HANNING = 1, 2, 3, 4;
-# ========== # ========== # ========== # ========== # 
-# Применение оконной функции
-# ========== # ========== # ========== # ========== # 
+
+
 def windowing(input_data, window_type, axis = -1):
+    '''Применение оконной функции'''
     window_length = input_data.shape[axis];
     if window_type == Window.BARTLETT: window = np.bartlett(window_length);
     elif window_type == Window.BLACKMAN: window = np.blackman(window_length);
@@ -17,12 +14,10 @@ def windowing(input_data, window_type, axis = -1):
     elif window_type == Window.HANNING: window = np.hanning(window_length);
     else: raise ValueError("Указанное окно не поддерживается.");
     return input_data * window;
-# 
-# 
-# ========== # ========== # ========== # ========== # 
-# Применение удаления статического беспорядка
-# ========== # ========== # ========== # ========== # 
+
+
 def clutter_removal(input_val, axis = 0):
+    '''Удаление статического беспорядка'''
     # Reorder the axes
     reordering = np.arange(len(input_val.shape));
     reordering[0] = axis;
@@ -32,11 +27,8 @@ def clutter_removal(input_val, axis = 0):
     mean = input_val.transpose(reordering).mean(0);
     output_val = input_val - mean;
     return output_val.transpose(reordering);
-# 
-# 
-# ========== # ========== # ========== # ========== # 
-# Вычисление параметров радара
-# ========== # ========== # ========== # ========== # 
+
+
 def getParams(*,    
                 num_tx: int = 3, num_chirps: int = 128, adc_samples: int = 256,
                 sample_rate: int = 10000,
@@ -45,6 +37,7 @@ def getParams(*,
                 idle_time: int = 100,
                 ramp_end_time: int = 60,
                 c = 3e8):
+    '''Вычисление параметров радара'''
     # Вычисление полосы пропускания сигнала ЛЧМ с учетом преобразования единиц измерения
     chirp_bandwidth = (freq_slope * 1e12 * adc_samples) / (sample_rate * 1e3);
     # center_frequency = start_freq * 1e9 + chirp_bandwidth / 2;

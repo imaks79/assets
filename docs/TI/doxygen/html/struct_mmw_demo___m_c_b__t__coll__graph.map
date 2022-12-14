@@ -1,0 +1,28 @@
+<map id="MmwDemo_MCB_t" name="MmwDemo_MCB_t">
+<area shape="rect" id="node2" href="$struct_mmw_demo___stats__t.html" title="Millimeter Wave Demo statistics. " alt="" coords="1636,333,1775,360"/>
+<area shape="rect" id="node3" href="$struct_mmw_demo___data_path_obj__t.html" title="Data path Object information. " alt="" coords="1614,384,1797,411"/>
+<area shape="rect" id="node4" href="$struct_mmw_demo___data_path_sub_frame_obj__t.html" title="Sub&#45;frame specific data path object definition. " alt="" coords="1237,262,1448,303"/>
+<area shape="rect" id="node5" href="$struct_mmw_demo___gui_mon_sel__t.html" title="Millimeter Wave Demo Gui Monitor Selection. " alt="" coords="873,152,1043,179"/>
+<area shape="rect" id="node6" href="$struct_mmw_demo___d_p_c___obj_det___dyn_cfg__t.html" title="MmwDemo_DPC_ObjDet\l_DynCfg_t" alt="" coords="871,203,1045,245"/>
+<area shape="rect" id="node7" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/objectdetection/objdethwa/docs/objdethwa.tag$struct_d_p_c___object_detection___dyn_cfg__t.html" title="DPC_ObjectDetection\l_DynCfg_t" alt="" coords="454,193,606,234"/>
+<area shape="rect" id="node8" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/dpu/cfarcaproc/docs/cfarcaproc.tag$struct_d_p_u___c_f_a_r_c_a_proc___cfar_cfg__t.html" title="DPU_CFARCAProc_CfarCfg_t" alt="" coords="10,17,215,44"/>
+<area shape="rect" id="node9" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpu/rangeproc/docs/rangeproc.tag$struct_d_p_u___range_proc___calib_dc_range_sig_cfg__t.html" title="DPU_RangeProc_CalibDcRange\lSigCfg_t" alt="" coords="5,69,220,110"/>
+<area shape="rect" id="node10" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/dpu/cfarcaproc/docs/cfarcaproc.tag$struct_d_p_u___c_f_a_r_c_a_proc___fov_cfg__t.html" title="DPU_CFARCAProc_FovCfg_t" alt="" coords="11,135,214,161"/>
+<area shape="rect" id="node11" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/objectdetection/objdethwa/docs/objdethwa.tag$struct_d_p_c___object_detection___static_clutter_removal_cfg___base__t.html" title="DPC_ObjectDetection\l_StaticClutterRemovalCfg\l_Base_t" alt="" coords="25,185,200,241"/>
+<area shape="rect" id="node12" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/dpu/aoaproc/docs/aoaproc.tag$struct_d_p_u___ao_a_proc___fov_aoa_cfg__t.html" title="DPU_AoAProc_FovAoaCfg_t" alt="" coords="15,265,210,292"/>
+<area shape="rect" id="node13" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/dpu/aoaproc/docs/aoaproc.tag$struct_d_p_u___ao_a_proc___multi_obj_beam_forming_cfg__t.html" title="DPU_AoAProc_MultiObjBeam\lFormingCfg_t" alt="" coords="13,317,212,358"/>
+<area shape="rect" id="node14" href="$struct_mmw_demo___a_d_c_buf_cfg__t.html" title="ADCBUF configuration (meant for CLI configuration) " alt="" coords="869,269,1047,296"/>
+<area shape="rect" id="node15" href="$struct_mmw_demo__timing_info.html" title="MmwDemo_timingInfo" alt="" coords="881,320,1035,347"/>
+<area shape="rect" id="node16" href="$struct_mmw_demo___d_p_c___obj_det___common_cfg__t.html" title="Same functionality as MmwDemo_DPC_ObjDet_DynCfg but for common configuration. " alt="" coords="1256,374,1429,415"/>
+<area shape="rect" id="node17" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/objectdetection/objdethwa/docs/objdethwa.tag$struct_d_p_c___object_detection___pre_start_common_cfg__t.html" title="DPC_ObjectDetection\l_PreStartCommonCfg_t" alt="" coords="877,374,1039,415"/>
+<area shape="rect" id="node18" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/dpu/aoaproc/docs/aoaproc.tag$struct_d_p_u___ao_a_proc__comp_rx_channel_bias_cfg__t.html" title="DPU_AoAProc_compRxChannel\lBiasCfg_t" alt="" coords="423,374,637,415"/>
+<area shape="rect" id="node19" href="$structcmplx16_im_re__t__.html" title="Complex data type, natural for C674x complex multiplication instructions. " alt="" coords="52,383,173,409"/>
+<area shape="rect" id="node20" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/objectdetection/objdethwa/docs/objdethwa.tag$struct_d_p_c___object_detection___measure_rx_channel_bias_cfg__t.html" title="DPC_ObjectDetection\l_MeasureRxChannelBiasCfg_t" alt="" coords="429,439,631,481"/>
+<area shape="rect" id="node21" href="$struct_mmw_demo___cfg__t.html" title="Millimeter Wave Demo configuration. " alt="" coords="1641,439,1769,465"/>
+<area shape="rect" id="node22" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/control/mmwave/docs/mmwave.tag$struct_m_m_wave___open_cfg__t.html" title="MMWave_OpenCfg_t" alt="" coords="1269,440,1417,467"/>
+<area shape="rect" id="node23" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/control/mmwave/docs/mmwave.tag$struct_m_m_wave___ctrl_cfg__t.html" title="MMWave_CtrlCfg_t" alt="" coords="1273,491,1412,517"/>
+<area shape="rect" id="node24" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/control/mmwave/docs/mmwave.tag$struct_m_m_wave___frame_cfg__t.html" title="MMWave_FrameCfg_t" alt="" coords="881,440,1035,467"/>
+<area shape="rect" id="node25" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/control/mmwave/docs/mmwave.tag$struct_m_m_wave___advanced_frame_cfg__t.html" title="MMWave_AdvancedFrameCfg_t" alt="" coords="852,491,1064,517"/>
+<area shape="rect" id="node26" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/control/mmwave/docs/mmwave.tag$struct_m_m_wave___cont_mode_cfg__t.html" title="MMWave_ContModeCfg_t" alt="" coords="869,541,1047,568"/>
+<area shape="rect" id="node27" href="$struct_mmw_demo___task_handles__t.html" title="Task handles storage structure. " alt="" coords="1613,489,1797,516"/>
+</map>

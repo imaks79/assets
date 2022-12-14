@@ -1,0 +1,15 @@
+<map id="xwr68xx/mmw/main.c" name="xwr68xx/mmw/main.c">
+<area shape="rect" id="node24" href="$sys__common_8h.html" title="This is the common header file used by the various mmWave SDK modules. " alt="" coords="287,348,463,375"/>
+<area shape="rect" id="node35" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/control/mmwave/docs/mmwave.tag$mmwave_8h.html" title="ti/control/mmwave/mmwave.h" alt="" coords="1036,348,1233,375"/>
+<area shape="rect" id="node36" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/control/dpm/docs/dpm.tag$dpm_8h.html" title="ti/control/dpm/dpm.h" alt="" coords="5051,87,5192,114"/>
+<area shape="rect" id="node37" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/datapath/dpc/objectdetection/objdethwa/docs/objdethwa.tag$objectdetection_8h.html" title="ti/datapath/dpc/objectdetection\l/objdethwa/objectdetection.h" alt="" coords="588,259,788,300"/>
+<area shape="rect" id="node40" href="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/utils/cli/docs/cli.tag$cli_8h.html" title="ti/utils/cli/cli.h" alt="" coords="5217,87,5319,114"/>
+<area shape="rect" id="node43" href="$mmwdemo__rfparser_8h.html" title="Header file for RF configuration parser. " alt="" coords="1214,169,1375,211"/>
+<area shape="rect" id="node47" href="$mmw__output_8h.html" title="This is the out&#45;bound interface header file for the Millimeter Wave Demo. " alt="" coords="5637,80,5792,121"/>
+<area shape="rect" id="node48" href="$mmw_8h.html" title="This is the main header file for the Millimeter Wave Demo. " alt="" coords="685,80,840,121"/>
+<area shape="rect" id="node49" href="$data__path_8h.html" title="This is the data path processing header. " alt="" coords="571,169,725,211"/>
+<area shape="rect" id="node50" href="$mmw__config_8h.html" title="This is the header file that describes configurations for the Millimeter Wave Demo. " alt="" coords="308,259,463,300"/>
+<area shape="rect" id="node25" href="$sys__types_8h.html" title="This is the common header file that contains types for mmwave SDK. " alt="" coords="65,430,223,457"/>
+<area shape="rect" id="node27" href="$sys__common__xwr68xx_8h.html" title="This is the common header file used by the various mmWave SDK modules for XWR68XX device..." alt="" coords="433,423,599,464"/>
+<area shape="rect" id="node45" href="$mmwdemo__adcconfig_8h.html" title="API header for adc open/config functions. " alt="" coords="811,259,973,300"/>
+</map>

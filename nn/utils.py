@@ -1,4 +1,6 @@
-import torch, random, os
+import torch
+import random 
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 import torchvision
@@ -42,12 +44,7 @@ def torch_seed(seed = 42, deterministic = True):
     np.random.seed(seed); # numpy
     torch.manual_seed(seed); # cpu
     torch.cuda.manual_seed(seed); # gpu
-    torch.backends.cudnn.deterministic=deterministic; # cudnn    
-
-
-#@markdown Выбираем устройство и узнаем версии.
-# device, dtype, num_workers = torch_stats();
-# torch_seed(seed = 42, deterministic = True);
+    torch.backends.cudnn.deterministic = deterministic; # cudnn    
 
 
 def imshow(batch_input, nrow, device):

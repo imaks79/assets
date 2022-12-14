@@ -1,0 +1,12 @@
+<map id="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/common/sys_common_xwr68xx.h" name="/home/gtbldadm/nightlybuilds/mmwave_sdk/ti/common/sys_common_xwr68xx.h">
+<area shape="rect" id="node2" href="$sys__common_8h.html" title="This is the common header file used by the various mmWave SDK modules. " alt="" coords="469,109,667,165"/>
+<area shape="rect" id="node3" href="$mmwdemo__rfparser_8c.html" title="Implements rf parser. " alt="" coords="5,213,181,240"/>
+<area shape="rect" id="node4" href="$mmwdemo__adcconfig_8c.html" title="Implements High level ADC open/config APIs. " alt="" coords="206,213,394,240"/>
+<area shape="rect" id="node5" href="$data__path_8h.html" title="This is the data path processing header. " alt="" coords="559,288,737,315"/>
+<area shape="rect" id="node7" href="$main_8c.html" title="This is the main file which implements the millimeter wave Demo. " alt="" coords="398,437,549,464"/>
+<area shape="rect" id="node9" href="$mmw__cli_8c.html" title="xwr68xx/mmw/mmw_cli.c" alt="" coords="777,437,951,464"/>
+<area shape="rect" id="node10" href="$mmw__config_8h.html" title="This is the header file that describes configurations for the Millimeter Wave Demo. " alt="" coords="470,213,666,240"/>
+<area shape="rect" id="node11" href="$mmw__res_8h.html" title="Defines partitioning of hardware resources (HWA, EDMA etc) among the DPCs and other components in the..." alt="" coords="901,213,1080,240"/>
+<area shape="rect" id="node6" href="$data__path_8c.html" title="Implements Data path processing functionality. " alt="" coords="573,437,752,464"/>
+<area shape="rect" id="node8" href="$mmw_8h.html" title="This is the main header file for the Millimeter Wave Demo. " alt="" coords="571,363,725,389"/>
+</map>

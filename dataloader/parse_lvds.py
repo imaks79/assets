@@ -23,7 +23,7 @@ class Parser():
         if isReal:
             numChirps = int(fileSize / numADCSamples / numRX);
             #create column for each chirp
-            LVDS = np.reshape(read_data, (numADCSamples * numRX, numChirps), order='F').transpose();
+            LVDS = np.reshape(read_data, (numADCSamples * numRX, numChirps), order = 'F').transpose();
         else:
             # for complex data
             # filesize = 2 * numADCSamples * numChirps
@@ -53,31 +53,31 @@ class Parser():
     
     def getFrames(self, channel):
         '''Возвращает данные вида: data[numFrames * numChirps * numADCSamples][numFrames]'''
-        return channel[:].reshape((-1, self.numFrames), order = 'F');
+        return channel[:].reshape((-1, self.numFrames), order = 'F'); 
     
     def getChirps(self, frames):
         '''Возвращает данные вида: chirps[numADCSaples][numChirps * numFrames]'''
         tmp = [];
         for i in range(self.numFrames):
-            tmp.append(frames[:, i].reshape((self.numADCSamples, self.numChirps), order = 'F'));
+            tmp.append(frames[:, i].reshape((self.numADCSamples, self.numChirps), order = 'F')); 
         return np.hstack(tmp);
     
     def organize(self, file_idx:int = 0):
-        self.raw_to_adc(file_idx = file_idx);
+        self.raw_to_adc(file_idx = file_idx); 
         data = self.adcData;
         '''Возвращает данные вида: data[numADCSamples][numChannels][numChirps * numFrames]'''
         tmp_1, tmp_2 = list(), list();
         for numChannel in range(self.numChannels):
-            tmp_1.append(self.getFrames(data[numChannel]));
+            tmp_1.append(self.getFrames(data[numChannel])); 
         for frames in tmp_1:
-            tmp_2.append(self.getChirps(frames));
+            tmp_2.append(self.getChirps(frames)); 
 
         # TODO: Надо бы переделать
         self.out_data =  np.stack((
                                     tmp_2[0], 
                                     tmp_2[1], 
                                     tmp_2[2], 
-                                    tmp_2[3]), axis = 1).transpose();
-        self.out_data = self.out_data.reshape(self.numFrames, self.numChirps, self.numChannels, self.numADCSamples, order = 'C');
+                                    tmp_2[3]), axis = 1).transpose(); 
+        self.out_data = self.out_data.reshape(self.numFrames, self.numChirps, self.numChannels, self.numADCSamples, order = 'C'); 
         
-        return self.out_data;
+        return self.out_data; 

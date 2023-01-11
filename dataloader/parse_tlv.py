@@ -1,8 +1,8 @@
-from analysis_tlv import *
-from utils import *
+from .analysis_tlv import *
+from .utils import *
 
 '''
-# Сообщения TLV
+Сообщения TLV
 MMWDEMO_UART_MSG_DETECTED_POINTS = 1; 
 MMWDEMO_UART_MSG_RANGE_PROFILE   = 2; 
 MMWDEMO_OUTPUT_MSG_NOISE_PROFILE = 3; 
@@ -12,7 +12,7 @@ MMWDEMO_OUTPUT_MSG_STATS = 6;
 MMWDEMO_OUTPUT_MSG_DETECTED_POINTS_SIDE_INFO  = 7; 
 MMWDEMO_OUTPUT_MSG_MAX = 8; 
 
-# Размеры
+Размеры
 OBJ_STRUCT_SIZE_BYTES = 12; 
 BYTE_VEC_ACC_MAX_SIZE = 2 ** 15; 
 '''

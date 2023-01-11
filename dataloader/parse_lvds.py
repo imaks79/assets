@@ -8,7 +8,7 @@ class Parser():
         # Список доступных для чтения файлов
         self.files = list(filter(lambda x: x.endswith('.bin'), os.listdir(root_directory)));
         
-    def raw_to_adc(self, file_idx:int = 0, numRX:int = 4, numADCSamples:int = 256, numADCBits:int = 16, MIMO:bool = False):    
+    def raw_to_adc(self, file_idx:int = 0, numRX:int = 4, numADCSamples:int = 256, numADCBits:int = 16):    
         name_of_file = self.files[file_idx];
         path2file = os.path.join(self.root_directory, name_of_file);
         with open(path2file, 'rb') as file:
@@ -28,16 +28,16 @@ class Parser():
             # for complex data
             # filesize = 2 * numADCSamples * numChirps
             numChirps = int(fileSize / 2 / numADCSamples / numRX);
-            LVDS = np.zeros(int(fileSize / 2)).astype(np.complex);
+            LVDS = np.zeros(int(fileSize / 2), dtype = np.complex128);
             # combine real and imaginary part into complex data
             # read in file: 2I is followed by 2Q
-            LVDS[::2] = read_data[::4] + np.complex(0, 1) * read_data[2::4];
-            LVDS[1::2] = read_data[1::4] + np.complex(0, 1) * read_data[3::4];
+            LVDS[::2] = read_data[::4] + 1j * read_data[2::4];
+            LVDS[1::2] = read_data[1::4] + 1j * read_data[3::4];
             # create column for each chirp
             # each row is data from one chirp
             LVDS = np.reshape(LVDS, (numADCSamples * numRX, numChirps), order = 'F').transpose();
         # organize data per RX
-        adcData = np.zeros((numRX, numChirps * numADCSamples)).astype(np.complex);
+        adcData = np.zeros((numRX, numChirps * numADCSamples), dtype = np.complex128);
         for row in range(numRX):
             for i in range(numChirps):
                 adcData[row, i * numADCSamples:((i + 1) * numADCSamples)] = LVDS[i, row * numADCSamples:((row + 1) * numADCSamples)];

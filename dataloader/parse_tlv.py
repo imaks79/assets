@@ -25,7 +25,7 @@ def getHeader(byteBuffer):
     Header['totalPacketLen'], idX   = np.matmul(byteBuffer[idX:idX + 4], word), idX + 4; 
     Header['platform'], idX         = format(np.matmul(byteBuffer[idX:idX + 4], word), 'x'), idX + 4; 
     Header['frameNumber'], idX      = np.matmul(byteBuffer[idX:idX + 4], word), idX + 4; 
-    Header['timeCpuCycles'], idX    = np.matmul(byteBuffer[idX:idX + 4], word), idX + 1; 
+    Header['timeCpuCycles'], idX    = np.matmul(byteBuffer[idX:idX + 4], word), idX + 4; 
     Header['numDetectedObj'], idX   = np.matmul(byteBuffer[idX:idX + 4], word), idX + 4; 
     Header['numTLVs'], idX          = np.matmul(byteBuffer[idX:idX + 4], word), idX + 4; 
     Header['subFrameNumber'], idX   = np.matmul(byteBuffer[idX:idX + 4], word), idX + 4; 
@@ -59,7 +59,8 @@ def readAndParseTLVData(Data, configParameters, frames = 1):
         # Очистка массива до первого появления кода синхронизации и подсчет размера пакета
         byteBuffer, totalPacketLen, magicOK = clear_data_before_magic_word(byteBuffer, byteBufferLength, startIdx); 
         # Данные
-        detObj, frameData = {}, {}; 
+        # TODO: ПРОВЕРИТЬ РАБОТОСПОСОБНОСТЬ
+        detObj, frameData = np.array(), np.array(); 
         currentIndex, dataOK = 0, 0; 
         # Анализ TLV 
         if magicOK:

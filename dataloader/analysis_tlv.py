@@ -15,43 +15,36 @@ def get_DETECTED_POINTS(Header, byteBuffer, detObj, idX):
     detectedElevAngle = np.zeros(Header['numDetectedObj'], dtype = np.float32); 
     detectedAzimuth = np.zeros(Header['numDetectedObj'], dtype = np.float32); 
     for objectNum in range(Header['numDetectedObj']):
-        # Чтение данных для объекта
-        x[objectNum] = byteBuffer[idX:idX + 4].view(dtype = np.float32); 
-        idX += 4; 
-        y[objectNum] = byteBuffer[idX:idX + 4].view(dtype = np.float32); 
-        idX += 4; 
-        z[objectNum] = byteBuffer[idX:idX + 4].view(dtype = np.float32); 
-        idX += 4; 
-        velocity[objectNum] = byteBuffer[idX:idX + 4].view(dtype = np.float32); 
-        idX += 4; 
+        # Чтение данных объекта
+        x[objectNum], idX = byteBuffer[idX:idX + 4].view(dtype = np.float32), idX + 4; 
+        y[objectNum], idX = byteBuffer[idX:idX + 4].view(dtype = np.float32), idX + 4; 
+        z[objectNum], idX = byteBuffer[idX:idX + 4].view(dtype = np.float32), idX + 4; 
+        velocity[objectNum], idX = byteBuffer[idX:idX + 4].view(dtype = np.float32), idX + 4; 
         # 16 позиций по 7 целей
         # Вычисление углов и расстояний
-        '''compDetectedRange[objectNum] = np.sqrt((x[objectNum] * x[objectNum])+(y[objectNum] * y[objectNum])+(z[objectNum] * z[objectNum])); 
-        # calculate azimuth from x, y           
-        if y[objectNum] == 0:
-            if x[objectNum] >= 0:
-                detectedAzimuth[objectNum] = 90; 
-            else:
-                detectedAzimuth[objectNum] = -90; 
-        else:
-            detectedAzimuth = np.arctan(x[objectNum] / y[objectNum]) * 180 / np.pi; 
-        # calculate elevation angle from x, y, z
-        if x[objectNum] == 0 and y[objectNum] == 0:
-            if z[objectNum] >= 0:
-                detectedElevAngle[objectNum] = 90; 
-            else: 
-                detectedElevAngle[objectNum] = -90; 
-        else:
-            detectedElevAngle[objectNum] = np.arctan(z[objectNum] / np.sqrt((x[objectNum] * x[objectNum]) + (y[objectNum] * y[objectNum]))) * 180 / np.pi
-    '''# Сохранение данных
-    detObj['x'] = x; 
-    detObj['y'] = y; 
-    detObj['z'] = z; 
-    detObj['velocity'] = velocity; 
+        # compDetectedRange[objectNum] = np.sqrt((x[objectNum] * x[objectNum])+(y[objectNum] * y[objectNum])+(z[objectNum] * z[objectNum])); 
+        # # calculate azimuth from x, y           
+        # if y[objectNum] == 0:
+        #     if x[objectNum] >= 0:
+        #         detectedAzimuth[objectNum] = 90; 
+        #     else:
+        #         detectedAzimuth[objectNum] = -90; 
+        # else:
+        #     detectedAzimuth = np.arctan(x[objectNum] / y[objectNum]) * 180 / np.pi; 
+        # # calculate elevation angle from x, y, z
+        # if x[objectNum] == 0 and y[objectNum] == 0:
+        #     if z[objectNum] >= 0:
+        #         detectedElevAngle[objectNum] = 90; 
+        #     else: 
+        #         detectedElevAngle[objectNum] = -90; 
+        # else:
+        #     detectedElevAngle[objectNum] = np.arctan(z[objectNum] / np.sqrt((x[objectNum] * x[objectNum]) + (y[objectNum] * y[objectNum]))) * 180 / np.pi
+    # Сохранение данных
+    detObj['x'], detObj['y'], detObj['z'], detObj['velocity'], dataOK = x, y, z, velocity, 1; 
     # detObj['compDetectedRange'] = compDetectedRange; 
     # detObj['detectedAzimuth'] = detectedAzimuth; 
     # detObj['detectedElevAngle'] = detectedElevAngle; 
-    dataOK = 1; 
+   
     return detObj, dataOK, idX;
 
 

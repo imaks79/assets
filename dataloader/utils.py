@@ -37,7 +37,7 @@ def rewrite_data(byteVec, byteCount):
 
 
 def find_magic_word(byteBuffer, byteBufferLength):
-    ## Поиск кода синхронизации 
+    # Поиск кода синхронизации 
     if byteBufferLength > 16:
         # Индексы вхождения
         possibleLocs = np.where(byteBuffer == magicWord[0])[0]; 
@@ -46,7 +46,8 @@ def find_magic_word(byteBuffer, byteBufferLength):
         for loc in possibleLocs:
             check = byteBuffer[loc:loc+len(magicWord)]; 
             if np.all(check == magicWord): startIdx.append(loc);  
-    return startIdx; 
+        return startIdx; 
+    return 0;
 
 
 def clear_data_before_magic_word(byteBuffer, byteBufferLength, startIdx):
@@ -61,12 +62,12 @@ def clear_data_before_magic_word(byteBuffer, byteBufferLength, startIdx):
         # Проверяет на наличие ошибок
         if byteBufferLength < 0: byteBufferLength = 0; 
         # Подсчет общей длины пакета
-        totalPacketLen = np.matmul(byteBuffer[12:12+4], word); 
+        totalPacketLen = np.matmul(byteBuffer[12:12 + 4], word); 
         if (byteBufferLength >= totalPacketLen) and (byteBufferLength != 0): magicOK = 1; 
-    return byteBuffer, totalPacketLen, magicOK; 
+        return byteBuffer, totalPacketLen, magicOK;
 
 
-def clear_old_data(byteBuffer, totalPacketLen, idX):
+def clear_old_data(byteBuffer, byteBufferLength, totalPacketLen, idX):
     # Удаление уже обработанных данных
     if idX > 0 and byteBufferLength > idX:
         shiftSize = totalPacketLen; 
@@ -78,7 +79,7 @@ def clear_old_data(byteBuffer, totalPacketLen, idX):
         # Убедитесь, что нет ошибок с длиной буфера
         if byteBufferLength < 0:
             byteBufferLength = 0; 
-    return byteBuffer, byteBufferLength; 
+        return byteBuffer, byteBufferLength; 
      
 
 def debug_message(tlv_type, tlv_length, tlvIdx, Header):

@@ -47,15 +47,19 @@ def torch_seed(seed = 42, deterministic = True):
     torch.backends.cudnn.deterministic = deterministic; # cudnn    
 
 
-def imshow(batch_input, nrow, device):
+def imshow(batch_input, nrow, device, class_names = None):
     """Imshow for Batch of Tensor."""
-    batch_grid = torchvision.utils.make_grid(batch_input, nrow = nrow, padding = 1).to(device);
+    batch_grid = torchvision.utils.make_grid(batch_input[0], nrow = nrow, padding = 1).to(device);
     batch_grid = batch_grid.cpu().numpy().transpose((1, 2, 0));    
     plt.figure(figsize = (12, 16));
     plt.imshow( batch_grid[:, :, 0], 
                 cmap = 'jet',
                 origin = 'lower', 
                 interpolation = 'bessel');
+    if class_names:
+        tmp = list();
+        tmp.append(class_names[i] for i in batch_input[1]); 
+        plt.title(tmp);
     plt.axis('off');
     plt.show();
 

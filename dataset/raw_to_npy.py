@@ -30,7 +30,7 @@ def start_save_process(idx_to_class_path, new_paths_list):
                                                 window_type_1d = Window.HANNING
                                                 );
                 # After ((range) > (range/2)) only noise given
-                fft1d_out = fft1d_out[:, :, :int(fft1d_out.shape[2] // 2)];
+                # fft1d_out = fft1d_out[:, :, :int(fft1d_out.shape[2] // 2)];
                 # DOPPLER processing
                 fft2d_out = doppler_processing( 
                                                 fft1d_out, 

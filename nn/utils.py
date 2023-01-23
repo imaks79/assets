@@ -58,8 +58,8 @@ def imshow(batch_input, nrow, device, class_names = None):
                 interpolation = 'bessel');
     if class_names:
         tmp = list();
-        tmp.append(class_names[i] for i in batch_input[1]); 
-        plt.title(tmp);
+        tmp.append([class_names[i] for i in batch_input[1]]); 
+        plt.title(tmp[0]);
     plt.axis('off');
     plt.show();
 
